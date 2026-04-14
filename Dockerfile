@@ -41,8 +41,9 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Install Node.js dependencies and build assets
 RUN npm install && npm run build
 
-# Change ownership of our applications directory
-RUN chown -R www-data:www-data /var/www
+# Change ownership and ensure Laravel writable dirs
+RUN chown -R www-data:www-data /var/www \
+    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
 # Copy start script
 COPY start.sh /usr/local/bin/start.sh
