@@ -555,9 +555,9 @@ p{color:var(--muted)}
   .grid-foot{gap:28px}
 }
 @media (max-width:720px){
-  body{font-size:.9rem}
-  p,li,.sym span,.perk span,.step p,.grade p,.feat p,.faq details p,.about-card p,.cta-lede,.lede,.site-footer p,.site-footer a{font-size:.82rem !important;line-height:1.55}
-  .tick-list li{font-size:.85rem}
+  body{font-size:1rem}
+  p,li,.sym span,.perk span,.step p,.grade p,.feat p,.faq details p,.about-card p,.cta-lede,.lede,.site-footer p,.site-footer a{font-size:.95rem !important;line-height:1.6}
+  .tick-list li{font-size:.98rem}
   .tb-addr{display:none}
   .topbar{font-size:.68rem;padding:5px 0}
   .topbar i{font-size:.7rem}
@@ -565,7 +565,7 @@ p{color:var(--muted)}
   .tb-mail{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:62%}
   .site-nav .nav-inner{padding-top:8px !important;padding-bottom:8px !important;gap:12px;justify-content:space-between}
   .brand{margin-right:auto}
-  .brand-logo{height:38px}
+  .brand-logo{height:52px}
   .site-nav .btn-sm{margin-left:auto;padding:7px 12px;font-size:.7rem;border-radius:8px;white-space:nowrap}
   .site-nav .btn-sm i{display:none}
   .hero{padding:24px 0 40px}
