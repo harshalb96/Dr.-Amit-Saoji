@@ -18,10 +18,16 @@ class AppointmentController extends Controller
 
         $appointment = Appointment::create($data);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Thank you! Our team will contact you shortly.',
-            'data'    => $appointment,
-        ]);
+        $message = 'Thank you! Our team will contact you shortly.';
+
+        if ($request->expectsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => $message,
+                'data'    => $appointment,
+            ]);
+        }
+
+        return redirect()->back()->with('success', $message);
     }
 }
