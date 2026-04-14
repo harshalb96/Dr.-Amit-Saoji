@@ -19,6 +19,13 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
+# Route PHP errors to stderr so they appear in Render logs
+RUN { \
+      echo 'log_errors = On'; \
+      echo 'error_log = /dev/stderr'; \
+      echo 'display_errors = Off'; \
+    } > /usr/local/etc/php/conf.d/zz-errors.ini
+
 # Enable Apache rewrite and point DocumentRoot to Laravel's public/
 RUN a2enmod rewrite \
     && sed -ri -e 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/*.conf \

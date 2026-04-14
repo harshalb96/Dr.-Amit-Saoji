@@ -9,8 +9,14 @@ if [ -z "$APP_KEY" ]; then
     php artisan key:generate --no-interaction
 fi
 
+# Force Laravel to log to stderr so errors appear in Render logs
+export LOG_CHANNEL=stderr
+
 # Run database migrations if needed (uncomment if you have a database)
 php artisan migrate --force
+
+# Dump a quick boot-check to see any fatal errors immediately
+php artisan about || true
 
 # Start Apache in foreground
 apache2-foreground
