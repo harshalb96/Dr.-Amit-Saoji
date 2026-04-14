@@ -10,7 +10,7 @@ if [ -z "$APP_KEY" ]; then
 fi
 
 # Run database migrations if needed (uncomment if you have a database)
-# php artisan migrate --force
+php artisan migrate --force
 
 # Start Apache in foreground
 apache2-foreground
