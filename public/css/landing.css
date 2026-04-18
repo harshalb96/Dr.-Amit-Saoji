@@ -91,14 +91,27 @@ p{color:var(--muted)}
 .site-nav nav a{color:var(--navy);font-weight:500;font-size:.92rem;transition:color .2s}
 .site-nav nav a:hover{color:var(--brand-2)}
 
+/* Section CTA wrapper */
+.section-cta{display:flex;justify-content:center;margin-top:40px}
+.section-cta .btn{padding:14px 28px;font-size:.95rem}
+@media (max-width:720px){
+  .section-cta{margin-top:28px}
+  .section-cta .btn{padding:12px 20px;font-size:.85rem}
+}
+
 /* HERO */
-.hero{position:relative;overflow:hidden;padding:40px 0 50px}
+.hero{position:relative;overflow:hidden;padding:100px 0 120px}
 .hero-bg{
   position:absolute;inset:0;z-index:-1;
-  background:
-    radial-gradient(circle at 85% 10%,rgba(44,181,160,.18),transparent 50%),
-    radial-gradient(circle at 10% 80%,rgba(23,59,108,.10),transparent 50%),
-    linear-gradient(180deg,#ffffff 0%,#f3fbf9 100%);
+  background:url('/img/hero.jpg') center/cover no-repeat;
+}
+@media (max-width:720px){
+  .hero-bg{
+    background:
+      radial-gradient(circle at 85% 10%,rgba(44,181,160,.18),transparent 50%),
+      radial-gradient(circle at 10% 80%,rgba(23,59,108,.10),transparent 50%),
+      linear-gradient(180deg,#ffffff 0%,#f3fbf9 100%);
+  }
 }
 .hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
 .eyebrow{
@@ -568,7 +581,7 @@ p{color:var(--muted)}
   .brand-logo{height:52px}
   .site-nav .btn-sm{margin-left:auto;padding:7px 12px;font-size:.7rem;border-radius:8px;white-space:nowrap}
   .site-nav .btn-sm i{display:none}
-  .hero{padding:24px 0 40px}
+  .hero{padding:70px 0 90px}
   .container{padding:0 18px}
   h1{font-size:1.7rem;line-height:1.15}
   .eyebrow{font-size:.72rem;padding:6px 12px}
@@ -593,8 +606,11 @@ p{color:var(--muted)}
   .stat-card strong{font-size:2.2rem}
   .stat-card p{font-size:.78rem}
   .hero-float{display:none}
-  .hero-cta{flex-direction:column;width:100%}
+  .hero-cta{flex-direction:column;width:100%;align-items:center}
   .hero-cta .btn{width:100%;justify-content:center}
+  .section-cta{justify-content:center}
+  #technique .btn-primary:not(.btn-block),
+  #doctor .btn-primary:not(.btn-block){display:flex;margin-left:auto;margin-right:auto;width:fit-content;justify-content:center}
   .hero-img img{height:260px}
   .hero-stats{gap:18px;flex-wrap:wrap}
   .appt-form{padding:22px}

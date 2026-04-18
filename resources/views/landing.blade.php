@@ -19,7 +19,7 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar">
+<div class="topbar" style="display:none;">
     <div class="container topbar-inner">
         <span class="tb-addr"><i class="fa-solid fa-location-dot"></i> Ramdaspeth, Nagpur</span>
         <span class="sep tb-addr">|</span>
@@ -30,7 +30,7 @@
 </div>
 
 <!-- NAV -->
-<header class="site-nav">
+<header class="site-nav" style="display:none;">
     <div class="container nav-inner">
         <a href="#" class="brand">
             <img src="https://www.drsaojisorthocare.com/wp-content/uploads/2022/06/Logo-1.png" alt="Dr. Amit Saoji — Ortho Care" class="brand-logo">
@@ -76,14 +76,9 @@
                 <div><strong>98%</strong><span>Success Rate</span></div>
             </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" style="display:none;">
             <div class="hero-img">
                 <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=900&q=80" alt="ACL Treatment" />
-            </div>
-            <div class="hero-float">
-                <div class="stars">★★★★★</div>
-                <p>"Back on the football field within 10 weeks. Dr. Saoji's team is incredible."</p>
-                <small>— Rohan K., Patient</small>
             </div>
         </div>
     </div>
@@ -161,6 +156,9 @@
                 <h4>Complete Tear</h4>
                 <p>Ligament is fully ruptured. Knee gives way. Arthroscopic ACL reconstruction is usually the best option.</p>
             </div>
+        </div>
+        <div class="section-cta">
+            <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-user-doctor"></i> Consult Dr. Amit Saoji</a>
         </div>
     </div>
 </section>
@@ -241,6 +239,9 @@
             <div class="card feat"><i class="fa-solid fa-heart-pulse"></i><h4>Personalised Plan</h4><p>Every knee is different. Your plan is built for you.</p></div>
             <div class="card feat"><i class="fa-solid fa-person-running"></i><h4>Sport-Ready Rehab</h4><p>Guided recovery protocols to get you back stronger.</p></div>
         </div>
+        <div class="section-cta">
+            <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-user-doctor"></i> Consult Dr. Amit Saoji</a>
+        </div>
     </div>
 </section>
 
@@ -294,6 +295,9 @@
                 <p>Marathoners, trekkers and gym enthusiasts ready for a pain-free comeback.</p>
             </div>
         </div>
+        <div class="section-cta">
+            <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-circle-check"></i> Check My Eligibility</a>
+        </div>
     </div>
 </section>
 
@@ -315,6 +319,9 @@
                 <li><i class="fa-solid fa-award"></i> Shoulder & Knee Arthroscopy Fellowship — Fortis, Chandigarh</li>
                 <li><i class="fa-solid fa-award"></i> Diploma in Sports Medicine</li>
             </ul>
+            <div style="margin-top:22px;">
+                <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-user-doctor"></i> Consult Dr. Amit Saoji</a>
+            </div>
         </div>
     </div>
 </section>
@@ -332,6 +339,9 @@
             <div class="step"><span>3</span><h4>Treatment Plan</h4><p>Surgery or rehab — personalised to your body and goals.</p></div>
             <div class="step"><span>4</span><h4>Arthroscopic Surgery</h4><p>Minimally invasive, same-day or overnight stay.</p></div>
             <div class="step"><span>5</span><h4>Return to Sport</h4><p>Guided rehab until you're stronger than before.</p></div>
+        </div>
+        <div class="section-cta">
+            <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-user-doctor"></i> Consult Dr. Amit Saoji</a>
         </div>
     </div>
 </section>
@@ -416,6 +426,9 @@
                 <summary>Do you accept insurance?</summary>
                 <p>Yes, most major health insurance plans are accepted. Our team will help with pre-authorisation and paperwork.</p>
             </details>
+        </div>
+        <div class="section-cta">
+            <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-comments"></i> Still Have Questions? Book Consultation</a>
         </div>
     </div>
 </section>

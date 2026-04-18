@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(php artisan:*)"
+      "Bash(php artisan:*)",
+      "Bash(npm run:*)",
+      "Bash(php -r 'require '\\\\''vendor/autoload.php'\\\\''; $app = require '\\\\''bootstrap/app.php'\\\\'';')",
+      "Bash(php -r \"var_dump\\(is_writable\\('bootstrap/cache'\\)\\);\")",
+      "Bash(icacls:*)",
+      "Bash(attrib \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\\\\cache\")",
+      "Bash(attrib \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\")",
+      "Bash(attrib -R \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\\\\cache\" /S /D)",
+      "Bash(attrib -R \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\")",
+      "Bash(cmd //c 'attrib -R \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\\\\cache\" && attrib -R \"D:\\\\Harshal\\\\Dr.-Amit-Saoji\\\\bootstrap\"')",
+      "Bash(cmd //c \"attrib -R cache\")",
+      "Bash(cmd //c \"attrib cache\")",
+      "Bash(cmd //c \"attrib -R bootstrap\")"
     ]
   }
 }
