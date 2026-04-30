@@ -487,7 +487,25 @@
             headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
         });
 
-        $('#appointmentForm').on('submit', function (e) {
+        // Trigger Modal
+        $('[href="#appointment"]').on('click', function(e) {
+            if ($(this).hasClass('btn')) {
+                e.preventDefault();
+                $('#appointmentModal').fadeIn();
+            }
+        });
+
+        $('.close-modal').on('click', function() {
+            $('#appointmentModal').fadeOut();
+        });
+
+        $(window).on('click', function(e) {
+            if ($(e.target).is('#appointmentModal')) {
+                $('#appointmentModal').fadeOut();
+            }
+        });
+
+        $('#appointmentForm, #appointmentFormModal').on('submit', function (e) {
             e.preventDefault();
             var $form = $(this);
             var $btn = $form.find('button[type="submit"]');
@@ -501,6 +519,11 @@
                 success: function (res) {
                     toastr.success(res.message || 'Appointment booked successfully!');
                     $form[0].reset();
+                    if ($form.attr('id') === 'appointmentFormModal') {
+                        setTimeout(function() {
+                            $('#appointmentModal').fadeOut();
+                        }, 1000);
+                    }
                 },
                 error: function (xhr) {
                     if (xhr.status === 422) {
@@ -520,6 +543,36 @@
     });
 </script>
 <a href="https://wa.me/919860380444" target="_blank" class="fab-wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- MODAL -->
+<div id="appointmentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h3>Book Your Free Consultation</h3>
+            <p>Fill out the form below and we'll get back to you shortly.</p>
+        </div>
+        <form id="appointmentFormModal" class="appt-form" method="POST" action="{{ route('appointment.store') }}">
+            @csrf
+            <div class="form-row" style="display:flex;gap:12px;flex-wrap:wrap;">
+                <label style="flex:1 1 200px;">Your Name
+                    <input type="text" name="name" placeholder="Full name" required>
+                </label>
+                <label style="flex:1 1 200px;">Email
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </label>
+            </div>
+            <label>Mobile Number
+                <input type="tel" name="phone" placeholder="+91 9xxxx xxxxx" required>
+            </label>
+            <label>Brief Message (optional)
+                <textarea name="message" rows="3" placeholder="Tell us briefly about your injury"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Book Free Appointment</button>
+            <p class="form-note"><i class="fa-solid fa-lock"></i> Your details are confidential.</p>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

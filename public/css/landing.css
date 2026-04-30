@@ -542,6 +542,66 @@ p{color:var(--muted)}
 .foot-logo{background:#fff}
 .fab-call:hover,.fab-wa:hover{transform:scale(1.1)}
 
+/* MODAL STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--muted);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--navy);
+}
+
+.modal-header {
+    padding: 30px 40px 10px;
+}
+
+.modal-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#appointmentModal .appt-form {
+    box-shadow: none;
+    padding: 20px 40px 40px;
+}
+
 /* RESPONSIVE */
 @media (max-width:960px){
   .about-visual{position:static}
