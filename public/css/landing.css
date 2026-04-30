@@ -602,6 +602,43 @@ p{color:var(--muted)}
     padding: 20px 40px 40px;
 }
 
+/* MODAL MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 94%;
+    }
+    .modal-header {
+        padding: 24px 20px 8px;
+    }
+    .modal-header h3 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+    .modal-header p {
+        font-size: 0.85rem !important;
+        margin-top: 4px;
+    }
+    #appointmentModal .appt-form {
+        padding: 10px 20px 24px;
+        gap: 12px;
+    }
+    #appointmentModal .appt-form label {
+        font-size: 0.8rem;
+    }
+    #appointmentModal .appt-form input, 
+    #appointmentModal .appt-form textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+    .close-modal {
+        right: 15px;
+        top: 10px;
+        font-size: 24px;
+    }
+}
+
 /* RESPONSIVE */
 @media (max-width:960px){
   .about-visual{position:static}
